@@ -19,14 +19,14 @@ Pre-requisite software
 - Node.JS v16.20.2 (Do not use major versions greater than 16)
 - NPM (included with Node.JS)
 - Bower 1.8+
-  'npm install -g bower'
+  ```npm install -g bower```
 - Grunt 1.2+
-  'npm install -g grunt-cli'
+  ```npm install -g grunt-cli```
 - Gradle 8.4
   See https://gradle.org/install/
   Optionally, you can obtain gradle via chocolatey.
 - Vue.JS
-  'npm install -g vue-cli'
+  ```npm install -g vue-cli```
   
 **Additionally Recommended for Windows Devices**</br>
 **========================**
@@ -47,16 +47,16 @@ Forenote: I'm most familiar with Unix based systems and use the file path conven
 **You must check out a revision prior to proceeding further.**
 7) Open a terminal through IntelliJ
 8) Change to the www directory
-- 'cd /www'
+- ```cd /www```
 9) Install dependancies through npm.
-- 'npm install gifsicle@1.0.3' - fixes build failure
-- 'npm install'
+- ```npm install gifsicle@1.0.3``` - fixes build failure
+- ```npm install```
 - Optionally, you may use the audit fix function built into NPM as it does not appear to cause any issues with building at this time.
-- 'npm install vue'
-- 'grunt build'
+- ```npm install vue```
+- ```grunt build```
 10) Copy ~/Developer/OpenSpecimen/ui/src_bk/ to ~/Developer/Openspecimen/ui/src/
 - This prevents Vue.JS from encountering a critical error. 
-  
+  (more soon)
 
 Features
 ---------
