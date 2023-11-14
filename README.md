@@ -13,7 +13,7 @@ Krishagni Solutions (India) actively develops newer versions of OpenSpecimen as 
 
 For more details visit: www.openspecimen.org
 
-**Build Requiements**
+**Build Requiements** </br>
 Pre-requisite software
 - JDK 17 (OpenJDK Recommended)
 - Node.JS v16.20.2 (Do not use major versions greater than 16)
@@ -28,15 +28,15 @@ Pre-requisite software
 - Vue.JS
   'npm install -g vue-cli'
   
-**Additionally Recommended for Windows Devices**
+**Additionally Recommended for Windows Devices**</br>
 **========================**
 - IntelliJ IDEA
 - Visual Studio (With Node.JS package)
 - Chocolatey a package manager for windows - https://chocolatey.org
 
-**Build Configuration Steps**
-**========================**
-Forenote: I'm most familiar with Unix based systems and use the file path conventions therein, you will need to provide a more explicit path in windows. 
+**Build Configuration Steps**</br>
+**========================**</br>
+Forenote: I'm most familiar with Unix based systems and use the file path conventions therein, you will need to provide a more explicit path in windows. </br>
 1) Create a new project in IntelliJ IDEA and select the "Get from Version Control" option. 
 2) Paste the repository link from above into the version control link as if you were going to use git to clone the repository. 
 **Please use the repository at krishagni/openspecimen as I do not intend to update this repository frequently.**
