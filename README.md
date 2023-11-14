@@ -13,6 +13,51 @@ Krishagni Solutions (India) actively develops newer versions of OpenSpecimen as 
 
 For more details visit: www.openspecimen.org
 
+**Build Requiements**
+Pre-requisite software
+- JDK 17 (OpenJDK Recommended)
+- Node.JS v16.20.2 (Do not use major versions greater than 16)
+- NPM (included with Node.JS)
+- Bower 1.8+
+  'npm install -g bower'
+- Grunt 1.2+
+  'npm install -g grunt-cli'
+- Gradle 8.4
+  See https://gradle.org/install/
+  Optionally, you can obtain gradle via chocolatey.
+- Vue.JS
+  'npm install -g vue-cli'
+  
+**Additionally Recommended for Windows Devices**
+**========================**
+- IntelliJ IDEA
+- Visual Studio (With Node.JS package)
+- Chocolatey a package manager for windows - https://chocolatey.org
+
+**Build Configuration Steps**
+**========================**
+Forenote: I'm most familiar with Unix based systems and use the file path conventions therein, you will need to provide a more explicit path in windows. 
+1) Create a new project in IntelliJ IDEA and select the "Get from Version Control" option. 
+2) Paste the repository link from above into the version control link as if you were going to use git to clone the repository. 
+**Please use the repository at krishagni/openspecimen as I do not intend to update this repository frequently.**
+3) Save into a directory of your choice (I recommend ~/Documents/Developer/OpenSpecimen/ for organizational purposes)
+4) IntelliJ will clone the git repository into the directory you selected and set itself to utilize the master branch.
+5) From the OpenSpeimen project window in IntelliJ IDEA please click commit number at the top of the application.
+6) This will open a menu, within this menu click check out tag or revision and check out the latest OpenSpecimen Version or Release Candidate (RC)
+**You must check out a revision prior to proceeding further.**
+7) Open a terminal through IntelliJ
+8) Change to the www directory
+- 'cd /www'
+9) Install dependancies through npm.
+- 'npm install gifsicle@1.0.3' - fixes build failure
+- 'npm install'
+- Optionally, you may use the audit fix function built into NPM as it does not appear to cause any issues with building at this time.
+- 'npm install vue'
+- 'grunt build'
+10) Copy ~/Developer/OpenSpecimen/ui/src_bk/ to ~/Developer/Openspecimen/ui/src/
+- This prevents Vue.JS from encountering a critical error. 
+  
+
 Features
 ---------
  * Planned and unplanned biospecimen collections
