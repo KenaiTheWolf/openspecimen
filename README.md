@@ -28,7 +28,7 @@ Pre-requisite software
 - Vue.JS
   ```npm install -g vue-cli```
   
-**Additionally Recommended for Windows Devices**</br>
+**Additional for Windows Devices**</br>
 **========================**
 - IntelliJ IDEA
 - Visual Studio (With Node.JS package)
@@ -45,18 +45,26 @@ Forenote: I'm most familiar with Unix based systems and use the file path conven
 5) From the OpenSpeimen project window in IntelliJ IDEA please click commit number at the top of the application.
 6) This will open a menu, within this menu click check out tag or revision and check out the latest OpenSpecimen Version or Release Candidate (RC)
 **You must check out a revision prior to proceeding further.**
-7) Open a terminal through IntelliJ
-8) Change to the www directory
+7) Open www and locate the package.json change imagemin to latest release by changing line 38 to ```"grunt-contrib-imagemin": "4.0.0",``` </br>
+**You must do this prior to performing the next steps. If you do not update this line you may have to restart from the beginning on a fresh copy of OpenSpecimen's source code.**
+8) Open a terminal through IntelliJ
+9) Change to the www directory
 - ```cd /www```
-9) Install dependancies through npm.
+10) Install dependancies.
 - ```npm install gifsicle@1.0.3``` - fixes build failure
+- ```npm install bower```
+- ```bower install```
+- At the bower install choose !5, this will automatically add the correct version of JQuery to the bower.json.
+- If you would like to edit this manually you may copy the bower.json file from this repository.
 - ```npm install```
+- ```npm audit fix```
 - Optionally, you may use the audit fix function built into NPM as it does not appear to cause any issues with building at this time.
-- ```npm install vue```
+- ```npm install @vue/cli```
+11) Run grunt build to check for errors with grunt prior to building the entire project.
 - ```grunt build```
-10) Copy ~/Developer/OpenSpecimen/ui/src_bk/ to ~/Developer/Openspecimen/ui/src/
+12) Copy ~/Developer/OpenSpecimen/ui/src_bk/ to ~/Developer/Openspecimen/ui/src/ if it is not already there.
 - This prevents Vue.JS from encountering a critical error. 
-  (more soon)
+13) 
 
 Features
 ---------
