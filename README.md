@@ -64,7 +64,12 @@ Forenote: I'm most familiar with Unix based systems and use the file path conven
 - ```grunt build```
 12) Copy ~/Developer/OpenSpecimen/ui/src_bk/ to ~/Developer/Openspecimen/ui/src/ if it is not already there.
 - This prevents Vue.JS from encountering a critical error. 
-13) 
+13) Change directory in your terminal back out to the project's root folder.
+14) Generate build files for IDEA.
+- ```gradle idea```
+15) Clean the project to prepare for build.
+- ```gradle clean```
+
 
 Features
 ---------
