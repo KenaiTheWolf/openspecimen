@@ -1,4 +1,4 @@
-{
+
   "name": "OpenSpecimen",
   "version": "2.0.0",
   "homepage": "https://github.com/krishagni/openspecimen",
@@ -63,7 +63,7 @@
     "angular-ui-select": "~0.12.0",
     "angular-translate": "~2.18.4",
     "tinymce": "5.4.1",
-    "jquery": "3.6.1"
+    "jquery": ">=3.1.x"
   },
   "appPath": "app"
 }
