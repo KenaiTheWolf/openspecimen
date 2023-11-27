@@ -813,6 +813,119 @@ const routes = [
         name: 'ConsentStatementAddEdit',
         component: () => import(/* webpackChunkName: "consents" */ '../biospecimen/consents/AddEdit.vue'),
         props: (route) => ({statementId: route.params && route.params.statementId})
+      },
+
+
+      /** Biospecimen pages **/
+      {
+        path: 'cp-view',
+        name: 'CpViewRoot',
+        component: () => import(/* webpackChunkName: "cp-view" */ '../biospecimen/participants/CpViewRoot.vue'),
+        children: [
+          {
+            path: ':cpId',
+            name: 'CpView',
+            component: () => import(/* webpackChunkName: "cp-view" */ '../biospecimen/participants/CpView.vue'),
+            props: (route) => ({cpId: route.params && route.params.cpId}),
+            children: [
+              {
+                path: 'participants/:cprId',
+                name: 'ParticipantsList',
+                component: () => import(/* webpackChunkName: "cp-view" */ '../biospecimen/participants/List.vue'),
+                props: (route) => ({
+                  cprId: route.params && route.params.cprId,
+                  filters: route.query.filters
+                }),
+                children: [
+                  {
+                    path: '',
+                    name: 'ParticipantsListItemRoot',
+                    component: () => import(/* webpackChunkName: "cp-view" */ '../biospecimen/participants/DetailRoot.vue'),
+                    props: (route) => ({cprId: route.params && route.params.cprId}),
+                    children: [
+                      {
+                        path: '',
+                        name: 'ParticipantsListItemDetail',
+                        component: () => import(/* webpackChunkName: "cp-view" */ '../biospecimen/participants/Detail.vue'),
+                        props: () => ({noNavButton: true}),
+                        children: [
+                          {
+                            path: 'overview',
+                            name: 'ParticipantsListItemDetail.Overview',
+                            component: () => import(/* webpackChunkName: "cp-view" */ '../biospecimen/participants/Overview.vue')
+                          }
+                        ]
+                      },
+                      {
+                        path: 'visit/:visitId',
+                        name: 'ParticipantsListItemVisitRoot',
+                        component: () => import(/* webpackChunkName: "cp-view" */ '../biospecimen/participants/visits/DetailRoot.vue'),
+                        props: (route) => ({visitId: route.params && route.params.visitId}),
+                        children: [
+                          {
+                            path: '',
+                            name: 'ParticipantsListItemVisitDetail',
+                            component: () => import(/* webpackChunkName: "cp-view" */ '../biospecimen/participants/visits/Detail.vue'),
+                            props: () => ({noNavButton: true}),
+                            children: [
+                              {
+                                path: 'overview',
+                                name: 'ParticipantsListItemVisitDetail.Overview',
+                                component: () => import(/* webpackChunkName: "cp-view" */ '../biospecimen/participants/visits/Overview.vue')
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                path: 'participants/:cprId',
+                name: 'ParticipantDetailRoot',
+                component: () => import(/* webpackChunkName: "cp-view" */ '../biospecimen/participants/DetailRoot.vue'),
+                props: (route) => ({cprId: route.params && route.params.cprId}),
+                children: [
+                  {
+                    path: 'detail',
+                    name: 'ParticipantDetail',
+                    component: () => import(/* webpackChunkName: "cp-view" */ '../biospecimen/participants/Detail.vue'),
+                    props: () => ({noNavButton: false}),
+                    children: [
+                      {
+                        path: 'overview',
+                        name: 'ParticipantDetail.Overview',
+                        component: () => import(/* webpackChunkName: "cp-view" */ '../biospecimen/participants/Overview.vue')
+                      }
+                    ]
+                  },
+                  {
+                    path: 'visit/:visitId',
+                    name: 'VisitRoot',
+                    component: () => import(/* webpackChunkName: "cp-view" */ '../biospecimen/participants/visits/DetailRoot.vue'),
+                    props: (route) => ({visitId: route.params && route.params.visitId}),
+                    children: [
+                      {
+                        path: 'detail',
+                        name: 'VisitDetail',
+                        component: () => import(/* webpackChunkName: "cp-view" */ '../biospecimen/participants/visits/Detail.vue'),
+                        props: () => ({noNavButton: false}),
+                        children: [
+                          {
+                            path: 'overview',
+                            name: 'VisitDetail.Overview',
+                            component: () => import(/* webpackChunkName: "cp-view" */ '../biospecimen/participants/visits/Overview.vue')
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },

@@ -3,6 +3,7 @@
     :schema="schema"
     :data="data"
     :allowSelection="allowSelection"
+    :selected="selected"
     :query="query"
     @filtersUpdated="loadList"
     @selectedRows="onRowsSelection"
@@ -20,7 +21,7 @@ import http     from '@/common/services/HttpClient.js';
 import util     from '@/common/services/Util.js';
 
 export default {
-  props: ['name', 'objectId', 'url', 'newTab', 'allowSelection', 'query'],
+  props: ['name', 'objectId', 'url', 'newTab', 'allowSelection', 'selected', 'query', 'autoSearchOpen'],
 
   emits: ['selectedRows', 'rowClicked', 'listLoaded'],
 
@@ -155,7 +156,7 @@ export default {
       );
       
       this.schema = {filters: this.filters};
-      this.schema.columns = this.list.columns.map(
+      const columns = this.schema.columns = this.list.columns.map(
         (column, idx) => {
           const result = {
             name: 'column.a_' + idx,
@@ -182,6 +183,18 @@ export default {
         }
       );
 
+      const urlColumnIdx = columns.findIndex(column => column.href);
+      const urlColumn = urlColumnIdx >= 0 ? columns[urlColumnIdx] : null;
+      if (urlColumn) {
+        this.schema.summary = {
+          title: {
+            text: (ro) => exprUtil.eval(ro, urlColumn.name),
+            url: (ro) => ui.ngServer + exprUtil.eval(ro, this.url)
+          },
+          descriptions: columns.map(column => column.name).filter((column, index) => index != urlColumnIdx)
+        };
+      }
+
       this.data = this.list.rows.map(
         (row) => {
           const columnData = row.data.reduce((acc, item, idx) => { acc['a_' + idx] = item; return acc; }, {});
@@ -205,6 +218,11 @@ export default {
             );
           }
         );
+      }
+
+      const hasFilters = this.hasFilters() && Object.values(filters || {}).length == 0;
+      if (this.autoSearchOpen == true && this.data.length > 12 && hasFilters) {
+        this.$refs.listView.displayFilters();
       }
 
       const fb = util.uriEncode(filters || {});
@@ -251,6 +269,14 @@ export default {
           orderDirection: event.sortOrder < 0 ? 'desc' : 'asc'
         });
       }
+    },
+
+    switchToSummaryView: function() {
+      this.$refs.listView.switchToSummaryView();
+    },
+
+    switchToTableView: function() {
+      this.$refs.listView.switchToTableView();
     }
   }
 }
