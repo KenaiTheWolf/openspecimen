@@ -1,4 +1,6 @@
 "IDENTIFIER","CONCEPT_CODE","DEFINITION","value","PUBLIC_ID"
+"getNextPvId()","","","SARS-CoV 2","specimen_biohazard"
+"getNextPvId()","","","MPXV MPox","specimen_biohazard"
 "getNextPvId()","","","HIV","specimen_biohazard"
 "getNextPvId()","","","Hepatitis A","specimen_biohazard"
 "getNextPvId()","","","Hepatitis B","specimen_biohazard"
