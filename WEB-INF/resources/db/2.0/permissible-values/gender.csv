@@ -2,4 +2,6 @@
 "getNextPvId()","","","Male","2003989"
 "getNextPvId()","","","Undifferentiated","2003989"
 "getNextPvId()","","","Female","2003989"
+"getNextPvId()","","","Intersex","2003989"
+"getNextPvId()","","","Other","2003989"
 "getNextPvId()","","","Unknown","2003989"
