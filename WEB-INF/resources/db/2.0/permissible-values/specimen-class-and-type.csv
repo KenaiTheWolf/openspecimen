@@ -13,6 +13,21 @@ getNextPvId(),,,"getPvParentId('2003991', 'Cell')",Frozen Cell Block
 getNextPvId(),,,"getPvParentId('2003991', 'Cell')",Not Specified
 getNextPvId(),,,"getPvParentId('2003991', 'Cell')",Cryopreserved Cells
 getNextPvId(),,,"getPvParentId('2003991', 'Fluid')",Whole Bone Marrow
+getNextPvId(),,,"getPvParentId('2003991', 'Fluid')",CCFDNA (BluePax)
+getNextPvId(),,,"getPvParentId('2003991', 'Fluid')",RNA (RedPax)
+getNextPvId(),,,"getPvParentId('2003991', 'Fluid')",CCFRBC
+getNextPvId(),,,"getPvParentId('2003991', 'Fluid')",C Buffy
+getNextPvId(),,,"getPvParentId('2003991', 'Fluid')",EDTA Unprocessed
+getNextPvId(),,,"getPvParentId('2003991', 'Fluid')",RBC
+getNextPvId(),,,"getPvParentId('2003991', 'Fluid')",Red Vacutainer (Unprocessed)
+getNextPvId(),,,"getPvParentId('2003991', 'Fluid')",Blood Clot
+getNextPvId(),,,"getPvParentId('2003991', 'Fluid')",Soil
+getNextPvId(),,,"getPvParentId('2003991', 'Fluid')",Water
+getNextPvId(),,,"getPvParentId('2003991', 'Fluid')",Dust
+getNextPvId(),,,"getPvParentId('2003991', 'Fluid')",Floor Wipe
+getNextPvId(),,,"getPvParentId('2003991', 'Fluid')",Hand Wipe
+getNextPvId(),,,"getPvParentId('2003991', 'Fluid')",Wristband
+getNextPvId(),,,"getPvParentId('2003991', 'Fluid')",Other Environmental
 getNextPvId(),,,"getPvParentId('2003991', 'Fluid')",Saliva
 getNextPvId(),,,"getPvParentId('2003991', 'Fluid')",Plasma
 getNextPvId(),,,"getPvParentId('2003991', 'Fluid')",Body Cavity Fluid
@@ -41,6 +56,18 @@ getNextPvId(),,,"getPvParentId('2003991', 'Tissue')",Frozen Tissue Slide
 getNextPvId(),,,"getPvParentId('2003991', 'Tissue')",Fresh Tissue
 getNextPvId(),,,"getPvParentId('2003991', 'Tissue')",Microdissected
 getNextPvId(),,,"getPvParentId('2003991', 'Tissue')",Frozen Tissue
+getNextPvId(),,,"getPvParentId('2003991', 'Tissue')",Teeth
+getNextPvId(),,,"getPvParentId('2003991', 'Tissue')",Nails
+getNextPvId(),,,"getPvParentId('2003991', 'Tissue')",Placenta
+getNextPvId(),,,"getPvParentId('2003991', 'Tissue')",Fetal Lung
+getNextPvId(),,,"getPvParentId('2003991', 'Tissue')",Fetal Gonad
+getNextPvId(),,,"getPvParentId('2003991', 'Tissue')",Fetal Liver
+getNextPvId(),,,"getPvParentId('2003991', 'Fluid')",Fetal Brain
+getNextPvId(),,,"getPvParentId('2003991', 'Tissue')",Fetal Eye
+getNextPvId(),,,"getPvParentId('2003991', 'Tissue')",Fetal Pancreas
+getNextPvId(),,,"getPvParentId('2003991', 'Tissue')",Fetal Bladder
+getNextPvId(),,,"getPvParentId('2003991', 'Tissue')",Fetal Gut
+getNextPvId(),,,"getPvParentId('2003991', 'Tissue')",Fetal Other
 getNextPvId(),,,"getPvParentId('2003991', 'Tissue')",Not Specified
 getNextPvId(),,,"getPvParentId('2003991', 'Fluid')",Sputum
 getNextPvId(),,,"getPvParentId('2003991', 'Cell')",Slide
