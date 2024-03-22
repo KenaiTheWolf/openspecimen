@@ -100,7 +100,7 @@ License
 OpenSpecimen is released under BSD 3 Style license. 
 https://github.com/krishagni/openspecimen/blob/trunk/LICENSE.md
 
-Contact Information
+Contact Information for Krishagni
 -------------------
 Project Lead: Srikanth Adiga
 Email: srikanth.adiga@openspecimen.org
