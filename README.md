@@ -63,7 +63,8 @@ Getting started:
 1) If you are on a Windows Device you will need to install NodeJS, Chocolatey, VisualStudio, BASH and GIT
 2) For all other users, install IntelliJ IDEA
 3) Launch IntelliJ and select "Import from VCS", input the URL provided from GitHub's clone context menu at the top of the repository.
-4) Open a terminal and run the script "build_intelliJ" the script will step through the process of installing all dependancies and compile OpenSpecimen for you.
+4) Check out a version tag (Preferably the latest Release or Release Candidate from the offical repository.)
+5) Open a terminal and run the script "build_intelliJ" the script will step through the process of installing all dependancies and compile OpenSpecimen for you.
 
 Manually Compiling:
 Forenote: This method is more difficult and does the same thing that the provided script does.
