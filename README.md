@@ -1,5 +1,3 @@
-**Please note I am not associated with Krishagni, I have only built this repository to be a resource for those who wish to build the community edition after I encountered several issues doing so by myself using the confluence board.
-I only wish to provide this as a resource to make OpenSpecimen more accessible to other researchers. **
 OpenSpecimen
 ============
 
@@ -106,3 +104,7 @@ Contact Information
 -------------------
 Project Lead: Srikanth Adiga
 Email: srikanth.adiga@openspecimen.org
+
+
+**Please note I am not associated with Krishagni, I have only built this repository to be a resource for those who wish to build the community edition after I encountered several issues doing so by myself using the confluence board.
+I only wish to provide this as a resource to make OpenSpecimen more accessible to other researchers. **
